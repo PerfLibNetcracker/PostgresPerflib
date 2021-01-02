@@ -28,5 +28,3 @@ spec:
           volumeMounts:
             - mountPath: /var/lib/postgresql/data
               name: postgredb
-      nodeSelector:
-        nodePool: cluster
