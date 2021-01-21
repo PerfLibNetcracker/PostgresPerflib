@@ -26,5 +26,5 @@ spec:
             - configMapRef:
                 name: postgres-config
           volumeMounts:
-            - mountPath: /var/lib/postgresql/data
+            - mountPath: '/var/lib/postgresql/data/'
               name: postgredb

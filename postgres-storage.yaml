@@ -5,13 +5,14 @@ metadata:
   labels:
     app: postgres
 spec:
+  storageClassName: manual
   capacity:
     storage: 5Gi
   accessModes:
     - ReadWriteOnce
   hostPath:
     type: DirectoryOrCreate
-    path: "/mnt/pgdata"
+    path: '/data/postgres'
 ---
 kind: PersistentVolumeClaim
 apiVersion: v1
@@ -20,6 +21,7 @@ metadata:
   labels:
     app: postgres
 spec:
+  storageClassName: manual
   selector:
     matchLabels:
       app: postgres
